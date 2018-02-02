@@ -1,0 +1,526 @@
+{
+  "boardTiles": [
+    {
+      "value": 1,
+      "color": "red",
+      "asset": "1",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 3.9
+    },
+    {
+      "value": 2,
+      "color": "black",
+      "asset": "2",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 1.05
+    },
+    {
+      "value": 3,
+      "color": "red",
+      "asset": "3",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 6
+    },
+    {
+      "value": 4,
+      "color": "black",
+      "asset": "4",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 0.74
+    },
+    {
+      "value": 5,
+      "color": "red",
+      "asset": "5",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 3.20
+    },
+    {
+      "value": 6,
+      "color": "black",
+      "asset": "6",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 1.65
+    },
+    {
+      "value": 7,
+      "color": "red",
+      "asset": "7",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 5.3
+    },
+    {
+      "value": 8,
+      "color": "black",
+      "asset": "8",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 2.65
+    },
+    {
+      "value": 9,
+      "color": "red",
+      "asset": "9",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 4.6
+    },
+    {
+      "value": 10,
+      "color": "black",
+      "asset": "10",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 3.05
+    },
+    {
+      "value": 11,
+      "color": "black",
+      "asset": "11",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 2.33
+    },
+    {
+      "value": 12,
+      "color": "red",
+      "asset": "12",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 5.65
+    },
+    {
+      "value": 13,
+      "color": "black",
+      "asset": "13",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 2
+    },
+    {
+      "value": 14,
+      "color": "red",
+      "asset": "14",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 4.25
+    },
+    {
+      "value": 15,
+      "color": "black",
+      "asset": "15",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 0.41
+    },
+    {
+      "value": 16,
+      "color": "red",
+      "asset": "16",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 3.55
+    },
+    {
+      "value": 17,
+      "color": "black",
+      "asset": "17",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 1.35
+    },
+    {
+      "value": 18,
+      "color": "red",
+      "asset": "18",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 4.95
+    },
+    {
+      "value": 19,
+      "color": "red",
+      "asset": "19",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 0.59
+    },
+    {
+      "value": 20,
+      "color": "black",
+      "asset": "20",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 4.05
+    },
+    {
+      "value": 21,
+      "color": "red",
+      "asset": "21",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 0.9
+    },
+    {
+      "value": 22,
+      "color": "black",
+      "asset": "22",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 4.75
+    },
+    {
+      "value": 23,
+      "color": "red",
+      "asset": "23",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 2.85
+    },
+    {
+      "value": 24,
+      "color": "black",
+      "asset": "24",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 3.35
+    },
+    {
+      "value": 25,
+      "color": "red",
+      "asset": "25",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 1.22
+    },
+    {
+      "value": 26,
+      "color": "black",
+      "asset": "26",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 6.15
+    },
+    {
+      "value": 27,
+      "color": "red",
+      "asset": "27",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 1.83
+    },
+    {
+      "value": 28,
+      "color": "black",
+      "asset": "28",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 5.455
+    },
+    {
+      "value": 29,
+      "color": "black",
+      "asset": "29",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 5.1
+    },
+    {
+      "value": 30,
+      "color": "red",
+      "asset": "30",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 2.5
+    },
+    {
+      "value": 31,
+      "color": "black",
+      "asset": "31",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 4.42
+    },
+    {
+      "value": 32,
+      "color": "red",
+      "asset": "32",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 0.23
+    },
+    {
+      "value": 33,
+      "color": "black",
+      "asset": "33",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 3.73
+    },
+    {
+      "value": 34,
+      "color": "red",
+      "asset": "34",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 1.49
+    },
+    {
+      "value": 35,
+      "color": "black",
+      "asset": "35",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 5.8
+    },
+    {
+      "value": 36,
+      "color": "red",
+      "asset": "36",
+      "x": null,
+      "y": null,
+      "boardRow": null,
+      "degree": 2.15
+    }
+  ],
+  "boardButtons": [
+      {
+          "x": 635,
+          "y": 42,
+          "asset": "1-18",
+          "bottomValue": 1,
+          "topValue": 18,
+          "color": null,
+          "bets": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17],
+          "odds": 2
+      },
+      {
+          "x": 635,
+          "y": 126,
+          "asset": "1-12r",
+          "bottomValue": 1,
+          "topValue": 12,
+          "color": "red",
+          "bets": [0, 2, 4, 6, 8, 11],
+          "odds": 4
+      },
+      {
+          "x": 635,
+          "y": 210,
+          "asset": "13-24r",
+          "bottomValue": 13,
+          "topValue": 24,
+          "color": "red",
+          "bets": [13, 15, 17, 18, 20, 22],
+          "odds": 4
+      },
+      {
+          "x": 662,
+          "y": 210,
+          "asset": "red",
+          "bottomValue": null,
+          "topValue": null,
+          "color": "red",
+          "bets": [0, 2, 4, 6, 8, 11, 13, 15, 17, 18, 20, 22, 24, 26, 29, 31, 33, 35],
+          "odds": 2
+      },
+      {
+          "x": 635,
+          "y": 378,
+          "asset": "25-36r",
+          "bottomValue": 25,
+          "topValue": 36,
+          "color": "red",
+          "bets": [24, 26, 29, 31, 33, 35],
+          "odds": 4
+      },
+      {
+          "x": 635,
+          "y": 462,
+          "asset": "even",
+          "bottomValue": null,
+          "topValue": null,
+          "color": null,
+          "bets": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35],
+          "odds": 2
+      },
+      {
+          "x": 468,
+          "y": 42,
+          "asset": "19-36",
+          "bottomValue": 19,
+          "topValue": 36,
+          "color": null,
+          "bets": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+          "odds": 2
+      },
+      {
+          "x": 468,
+          "y": 126,
+          "asset": "1-12b",
+          "bottomValue": 1,
+          "topValue": 12,
+          "color": "black",
+          "bets": [1, 3, 5, 7, 9, 10],
+          "odds": 4
+      },
+      {
+          "x": 482,
+          "y": 210,
+          "asset": "13-24b",
+          "bottomValue": 13,
+          "topValue": 24,
+          "color": "black",
+          "bets": [12, 14, 16, 19, 21, 23],
+          "odds": 4
+      },
+      {
+          "x": 454,
+          "y": 210,
+          "asset": "black",
+          "bottomValue": null,
+          "topValue": null,
+          "color": "black",
+          "bets": [1, 3, 5, 7, 9, 10, 12, 14, 16, 19, 21, 23, 25, 27, 28, 30, 32, 34],
+          "odds": 2
+      },
+      {
+          "x": 468,
+          "y": 378,
+          "asset": "25-36b",
+          "bottomValue": 25,
+          "topValue": 36,
+          "color": "black",
+          "bets": [25, 27, 28, 30, 32, 34],
+          "odds": 4
+      },
+      {
+          "x": 468,
+          "y": 462,
+          "asset": "odd",
+          "bottomValue": null,
+          "topValue": null,
+          "color": null,
+          "bets": [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34],
+          "odds": 2
+      },
+      {
+          "x": 510,
+          "y": 546,
+          "asset": "1st",
+          "bottomValue": null,
+          "topValue": null,
+          "color": "null",
+          "bets": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33],
+          "odds": 3
+      },
+      {
+          "x": 552,
+          "y": 546,
+          "asset": "2nd",
+          "bottomValue": null,
+          "topValue": null,
+          "color": "null",
+          "bets": [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34],
+          "odds": 3
+      },
+      {
+          "x": 594,
+          "y": 546,
+          "asset": "3rd",
+          "bottomValue": null,
+          "topValue": null,
+          "color": "null",
+          "bets": [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35],
+          "odds": 3
+      },
+      {
+          "x": 468,
+          "y": 0,
+          "asset": "header",
+          "bottomValue": null,
+          "topValue": null,
+          "color": "null",
+          "bets": null
+      }
+  ],
+ "chips": [
+    {
+        "x": 0,
+        "y": 400,
+        "asset": "whiteChip",
+        "value": 100
+    },
+    {
+        "x": 0,
+        "y": 444,
+        "asset": "redChip",
+        "value": 50
+    },
+    {
+        "x": 0,
+        "y": 488,
+        "asset": "blueChip",
+        "value": 10
+    },
+    {
+        "x": 0,
+        "y": 534,
+        "asset": "greenChip",
+        "value": 5
+    },
+    {
+        "x": 0,
+        "y": 578,
+        "asset": "blackChip",
+        "value": 1
+    }
+ ],
+ "win": [
+     {
+        "amount": 250
+     }
+ ]
+}
