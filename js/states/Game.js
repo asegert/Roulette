@@ -7,6 +7,8 @@ Roulette.GameState = {
     {
         //Data from the JSON file
         this.allData = JSON.parse(this.game.cache.getText('rouletteData'));
+        //Tracks number of spins
+        this.spins = 0;
         //Holds the current chip being 'bet'
         this.chip = null;
         //Holds all 'bets' allowing multiple bets to be placed
@@ -40,7 +42,7 @@ Roulette.GameState = {
         //Sets color of the 'table'
         this.background = this.add.sprite(0, 0, "background");
         this.background.width = 700;
-        this.background.height = 640;
+        this.background.height = 750;
         //Group of tiles for the 'betting' board
         this.boardTiles = this.add.group();
         //Group of chips that can be 'bet'
@@ -63,7 +65,8 @@ Roulette.GameState = {
         //Initializes the chip cursor so an asset (the chip) can be attached to the cursor
         this.chipCursor = this.add.sprite(43, 43, null);
         //Text to tell the player how much money he has
-        this.moneyText = this.add.text(20, 340, ("Your money: $" + this.money), { fill: '#fff' });
+        this.moneyText = this.add.text(204, 370, ("Your money: $" + this.money), { fill: '#fff' });
+        this.moneyText.anchor.setTo(0.5, 0.5);
         //Starts instruction sequence
         this.instruct();
     },
@@ -83,6 +86,8 @@ Roulette.GameState = {
             }
             else
             {
+                //Add to spins
+                this.spins++;
                 //If it has input must not be allowed on the board or chips as all bets should be placed
                 this.boardTiles.inputEnabled = false;
                 this.chipTiles.inputEnabled = false;
@@ -109,6 +114,7 @@ Roulette.GameState = {
             }
             else
             {
+                this.spins++;
                 this.boardTiles.inputEnabled = false;
                 this.chipTiles.inputEnabled = false;
                 this.wheelSpin();
@@ -155,6 +161,8 @@ Roulette.GameState = {
         //'Blackout' the game screen
         this.blackout = this.add.sprite(0, 0, 'blackout');
         this.blackout.alpha = 0.7;
+        this.blackout.width = 700;
+        this.blackout.height = 750;
         //Display instructions
         this.instructions = this.add.sprite(30, 70, 'instructions');
         //Button to start game play
@@ -195,14 +203,15 @@ Roulette.GameState = {
         {
             for (var j = 1; j < 13; j++)
             {
-                var tile = new Phaser.Sprite(this.game, (i * (60 * 0.7)) + 510, (((j - 1) * (60 * 0.7)) + 42), this.allData.boardTiles[((((j - 1) * 3) + i))].asset);
-                tile.scale.setTo(0.7);
+                var scale = 0.9;
+                var tile = new Phaser.Sprite(this.game, (i * (60 * scale)) + 410, (((j - 1) * (60 * scale)) + 50), this.allData.boardTiles[((((j - 1) * 3) + i))].asset);
+                tile.scale.setTo(scale);
 
                 //For single digits
                 //x = (row (0-2) * (tilesize * scale%)) + x offset to move to end of board
                 //y = (column (0-11)-1 (to begin at 0) * (tilesize * scale%) + 42 (tile offset))
-                this.allData.boardTiles[((((j - 1) * 3) + i))].x = (i * (60 * 0.7)) + 510;
-                this.allData.boardTiles[((((j - 1) * 3) + i))].y = ((j - 1) * (60 * 0.7) + 42);
+                this.allData.boardTiles[((((j - 1) * 3) + i))].x = (i * (60 * scale)) + 410;
+                this.allData.boardTiles[((((j - 1) * 3) + i))].y = ((j - 1) * (60 * scale) + 50);
                 this.allData.boardTiles[((((j - 1) * 3) + i))].boardRow = (i + 1);
 
                 //Assign each tile it's data
@@ -221,7 +230,7 @@ Roulette.GameState = {
         for (var i = 0; i < this.allData.boardButtons.length; i++)
         {
             var tile = new Phaser.Sprite(this.game, this.allData.boardButtons[i].x, this.allData.boardButtons[i].y, this.allData.boardButtons[i].asset);
-            tile.scale.setTo(0.7);
+            tile.scale.setTo(scale);
             //Gives tile it's data
             tile.data = this.allData.boardButtons[i];
             //Adds to group
@@ -240,7 +249,6 @@ Roulette.GameState = {
         for (var i = 0; i < this.allData.chips.length; i++)
         {
             var tile = new Phaser.Sprite(this.game, this.allData.chips[i].x, this.allData.chips[i].y, this.allData.chips[i].asset);
-            tile.scale.setTo(0.7);
             //Give chip it's data  
             tile.data = this.allData.chips[i];
             //Add to group
@@ -251,8 +259,9 @@ Roulette.GameState = {
             {
                 this.chipSelect(tile);
             }, this);
+
             //Create text for the chip with it's cost/value
-            this.add.text(this.allData.chips[i].x + 55, this.allData.chips[i].y, this.allData.chips[i].value, { fill: '#fff' });
+            this.add.text(this.allData.chips[i].x + 90, this.allData.chips[i].y, this.allData.chips[i].value, { fill: '#fff' });
         }
     },
     chipSelect: function (chip)
@@ -286,7 +295,8 @@ Roulette.GameState = {
             //Remove the previous money display
             this.moneyText.kill();
             //Show new value
-            this.moneyText = this.add.text(20, 340, ("Your money: $" + this.money), { fill: '#fff' });
+            this.moneyText = this.add.text(204, 370, ("Your money: $" + this.money), { fill: '#fff' });
+            this.moneyText.anchor.setTo(0.5, 0.5);
             //Dim the chips since one is already in play
             this.chipTiles.alpha = 0.5;
             //Attach the chip asset to the cursor
@@ -382,7 +392,8 @@ Roulette.GameState = {
         }
         //Reset money to display the new value
         this.moneyText.kill();
-        this.moneyText = this.add.text(20, 340, ("Your money: $" + this.money), { fill: '#fff' });
+        this.moneyText = this.add.text(204, 370, ("Your money: $" + this.money), { fill: '#fff' });
+        this.moneyText.anchor.setTo(0.5, 0.5);
 
         //Remove all previously bet chips from the board
         this.betChips.forEach(function (chip)
@@ -399,8 +410,16 @@ Roulette.GameState = {
     },
     update: function ()
     {
-        //Keeps track of the cursor's position so the chip can update
-        this.chipCursor.position.set(this.input.activePointer.worldX - 10, this.input.activePointer.worldY - 10);
+        if (this.game.device.desktop)
+        {
+            //Keeps track of the cursor's position so the chip can update
+            this.chipCursor.position.set(this.input.activePointer.worldX - 10, this.input.activePointer.worldY - 10);
+        }
+        else
+        {
+            //Keeps track of the cursor's position so the chip can update - mobile
+            this.chipCursor.position.set(this.input.pointer1.worldX - 10, this.input.pointer1.worldY - 10);
+        }
         //Keep the cursor image above all other assets
         this.world.bringToTop(this.chipCursor);
 
@@ -468,17 +487,20 @@ Roulette.GameState = {
                 chip.alpha = 1;
             }
         });
-        //If enough money has been achieved game is won
-        if (this.money >= this.allData.win[0].amount)
+        //If enough spins has occured
+        if (this.spins >= 3 && !this.isSpinning)
         {
             this.alerts.destroy();
             this.alerts = this.add.sprite(200, 450, 'win');
+            this.state.start('Prize');
+            
         }
         //If there is no money and a new round has begun, in other words there is no money, but bets are placed that could give money, then the player loses
         else if (this.money == 0 && this.newRound)
         {
             this.alerts.destroy();
             this.alerts = this.add.sprite(200, 450, 'lose');
+            this.state.start('Prize');
         }
     }
 };

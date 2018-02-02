@@ -14,7 +14,11 @@
 
  </style>
 </head>
-<body class="background-new" style="background-color: #000000">
+<body class="background-new" style=" background: url(assets/images/game-page-background.jpg) no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;">
 	<form runat='server' id="form1" name='form1' method='POST' action="">
 			<input type="hidden" id="player_score" value="" runat="server" />
 			<input type="hidden" id="__ErrorMessage" value="" runat="server" />
@@ -24,6 +28,7 @@
         <script type="text/javascript" src="js/states/Boot.js"></script>
 		<script type="text/javascript" src="js/states/Preload.js"></script>
 		<script type="text/javascript" src="js/states/Game.js"></script>
+        <script type="text/javascript" src="js/states/Prize.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

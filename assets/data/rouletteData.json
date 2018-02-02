@@ -327,8 +327,8 @@
   ],
   "boardButtons": [
       {
-          "x": 635,
-          "y": 42,
+          "x": 570,
+          "y": 50,
           "asset": "1-18",
           "bottomValue": 1,
           "topValue": 18,
@@ -337,8 +337,8 @@
           "odds": 2
       },
       {
-          "x": 635,
-          "y": 126,
+          "x": 570,
+          "y": 158,
           "asset": "1-12r",
           "bottomValue": 1,
           "topValue": 12,
@@ -347,8 +347,8 @@
           "odds": 4
       },
       {
-          "x": 635,
-          "y": 210,
+          "x": 570,
+          "y": 268,
           "asset": "13-24r",
           "bottomValue": 13,
           "topValue": 24,
@@ -357,8 +357,8 @@
           "odds": 4
       },
       {
-          "x": 662,
-          "y": 210,
+          "x": 605,
+          "y": 268,
           "asset": "red",
           "bottomValue": null,
           "topValue": null,
@@ -367,8 +367,8 @@
           "odds": 2
       },
       {
-          "x": 635,
-          "y": 378,
+          "x": 570,
+          "y": 485,
           "asset": "25-36r",
           "bottomValue": 25,
           "topValue": 36,
@@ -377,8 +377,8 @@
           "odds": 4
       },
       {
-          "x": 635,
-          "y": 462,
+          "x": 570,
+          "y": 590,
           "asset": "even",
           "bottomValue": null,
           "topValue": null,
@@ -387,8 +387,8 @@
           "odds": 2
       },
       {
-          "x": 468,
-          "y": 42,
+          "x": 360,
+          "y": 50,
           "asset": "19-36",
           "bottomValue": 19,
           "topValue": 36,
@@ -397,8 +397,8 @@
           "odds": 2
       },
       {
-          "x": 468,
-          "y": 126,
+          "x": 360,
+          "y": 158,
           "asset": "1-12b",
           "bottomValue": 1,
           "topValue": 12,
@@ -407,8 +407,8 @@
           "odds": 4
       },
       {
-          "x": 482,
-          "y": 210,
+          "x": 374,
+          "y": 268,
           "asset": "13-24b",
           "bottomValue": 13,
           "topValue": 24,
@@ -417,8 +417,8 @@
           "odds": 4
       },
       {
-          "x": 454,
-          "y": 210,
+          "x": 346,
+          "y": 268,
           "asset": "black",
           "bottomValue": null,
           "topValue": null,
@@ -427,8 +427,8 @@
           "odds": 2
       },
       {
-          "x": 468,
-          "y": 378,
+          "x": 360,
+          "y": 485,
           "asset": "25-36b",
           "bottomValue": 25,
           "topValue": 36,
@@ -437,8 +437,8 @@
           "odds": 4
       },
       {
-          "x": 468,
-          "y": 462,
+          "x": 360,
+          "y": 590,
           "asset": "odd",
           "bottomValue": null,
           "topValue": null,
@@ -447,8 +447,8 @@
           "odds": 2
       },
       {
-          "x": 510,
-          "y": 546,
+          "x": 410,
+          "y": 696,
           "asset": "1st",
           "bottomValue": null,
           "topValue": null,
@@ -457,8 +457,8 @@
           "odds": 3
       },
       {
-          "x": 552,
-          "y": 546,
+          "x": 464,
+          "y": 696,
           "asset": "2nd",
           "bottomValue": null,
           "topValue": null,
@@ -467,8 +467,8 @@
           "odds": 3
       },
       {
-          "x": 594,
-          "y": 546,
+          "x": 518,
+          "y": 696,
           "asset": "3rd",
           "bottomValue": null,
           "topValue": null,
@@ -477,7 +477,7 @@
           "odds": 3
       },
       {
-          "x": 468,
+          "x": 360,
           "y": 0,
           "asset": "header",
           "bottomValue": null,
@@ -489,31 +489,31 @@
  "chips": [
     {
         "x": 0,
-        "y": 400,
+        "y": 420,
         "asset": "whiteChip",
         "value": 100
     },
     {
         "x": 0,
-        "y": 444,
+        "y": 484,
         "asset": "redChip",
         "value": 50
     },
     {
         "x": 0,
-        "y": 488,
+        "y": 548,
         "asset": "blueChip",
         "value": 10
     },
     {
         "x": 0,
-        "y": 534,
+        "y": 608,
         "asset": "greenChip",
         "value": 5
     },
     {
         "x": 0,
-        "y": 578,
+        "y": 668,
         "asset": "blackChip",
         "value": 1
     }

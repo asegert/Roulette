@@ -91,6 +91,10 @@ Roulette.PreloadState = {
     this.load.image('instructions', 'assets/images/instructions.png');
     this.load.image('start', 'assets/images/startButton.png');
     this.load.image('blackout', 'assets/images/blackout.png');
+
+    this.load.image('finalScreen', 'assets/images/game-page-background.jpg');
+    this.load.image('gift', 'assets/images/Gift.png');
+    this.load.image('coupon', 'assets/images/coupon.jpg');
       
     this.load.audio('clicker', ['assets/audio/clicker.m4a', 'assets/audio/clicker.mp3', 'assets/audio/clicker.ogg']);
     this.load.audio('throw', ['assets/audio/throw.m4a', 'assets/audio/throw.mp3', 'assets/audio/throw.ogg']);
