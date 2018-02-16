@@ -3,7 +3,13 @@ var Roulette = Roulette || {};
 Roulette.PrizeState = {
     init: function ()
     {
-        //console.log(Roulette.GameState.money);
+        if(Roulette.Round != 3)
+        {
+            this.time.events.add(Phaser.Timer.SECOND * 6, function()
+            {
+                this.state.start('Game');
+            }, this);
+        }
     },
     create: function ()
     {
@@ -18,34 +24,7 @@ Roulette.PrizeState = {
         if (Roulette.GameState.money > 0)
         {
             this.text = this.add.text(40, 50, "You Win!\nYou got $" + Roulette.GameState.money + "\nCash in Your Chips for Your Prize!", this.style);
-
-            this.gift1 = this.add.button(0, 300, 'gift', function ()
-            {
-                this.text.destroy();
-                this.text = this.add.text(150, 50, "Congratulations!\nHere's your prize.", this.style);
-                this.gift1.destroy();
-                this.gift2.destroy();
-                this.gift3.destroy();
-                this.emit();
-            }, this);
-            this.gift2 = this.add.button(240, 300, 'gift', function ()
-            {
-                this.text.destroy();
-                this.text = this.add.text(150, 50, "Congratulations!\nHere's your prize.", this.style);
-                this.gift1.destroy();
-                this.gift2.destroy();
-                this.gift3.destroy();
-                this.emit();
-            }, this);
-            this.gift3 = this.add.button(480, 300, 'gift', function ()
-            {
-                this.text.destroy();
-                this.text = this.add.text(150, 50, "Congratulations!\nHere's your prize.", this.style);
-                this.gift1.destroy();
-                this.gift2.destroy();
-                this.gift3.destroy();
-                this.emit();
-            }, this);
+            this.emit();
         }
         else
         {
@@ -76,10 +55,6 @@ Roulette.PrizeState = {
         emitter4.start(true, 5000, null, 40);
         emitter5.start(true, 5000, null, 40);
 
-        this.coupon();
-    },
-    coupon: function ()
-    {
         this.coupon = this.add.sprite(this.world.centerX, this.world.centerY, 'coupon');
         this.coupon.anchor.set(0.5);
         this.world.bringToTop(emitter1);

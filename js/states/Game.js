@@ -147,46 +147,50 @@ Roulette.GameState = {
     instruct: function ()
     {
         Roulette._background.play('', 0, 1, true);
-        //Disable input so game can't be played
-        this.wheel.inputEnabled = false;
-        this.spinner.inputEnabled = false;
-        this.chipTiles.forEach(function (chip)
+
+        if(Roulette.Round==0)
         {
-            chip.inputEnabled = false;
-        });
-        this.boardTiles.forEach(function (board)
-        {
-            board.inputEnabled = false;
-        });
-        //'Blackout' the game screen
-        this.blackout = this.add.sprite(0, 0, 'blackout');
-        this.blackout.alpha = 0.7;
-        this.blackout.width = 700;
-        this.blackout.height = 750;
-        //Display instructions
-        this.instructions = this.add.sprite(30, 70, 'instructions');
-        //Button to start game play
-        this.start = this.add.button(430, 350, 'start');
-        this.start.scale.setTo(0.5, 0.5);
-        //When game play should start
-        this.start.events.onInputDown.add(function ()
-        {
-            //Enable input for gameplay
-            this.wheel.inputEnabled = true;
-            this.spinner.inputEnabled = true;
+            //Disable input so game can't be played
+            this.wheel.inputEnabled = false;
+            this.spinner.inputEnabled = false;
             this.chipTiles.forEach(function (chip)
             {
-                chip.inputEnabled = true;
+                chip.inputEnabled = false;
             });
             this.boardTiles.forEach(function (board)
             {
-                board.inputEnabled = true;
+                board.inputEnabled = false;
             });
-            //Remove instruction elements that overlay the game
-            this.blackout.destroy();
-            this.instructions.destroy();
-            this.start.destroy();
-        }, this);
+            //'Blackout' the game screen
+            this.blackout = this.add.sprite(0, 0, 'blackout');
+            this.blackout.alpha = 0.7;
+            this.blackout.width = 700;
+            this.blackout.height = 750;
+            //Display instructions
+            this.instructions = this.add.sprite(30, 70, 'instructions');
+            //Button to start game play
+            this.start = this.add.button(430, 350, 'start');
+            this.start.scale.setTo(0.5, 0.5);
+            //When game play should start
+            this.start.events.onInputDown.add(function ()
+            {
+                //Enable input for gameplay
+                this.wheel.inputEnabled = true;
+                this.spinner.inputEnabled = true;
+                this.chipTiles.forEach(function (chip)
+                {
+                    chip.inputEnabled = true;
+                });
+                this.boardTiles.forEach(function (board)
+                {
+                    board.inputEnabled = true;
+                });
+                //Remove instruction elements that overlay the game
+                this.blackout.destroy();
+                this.instructions.destroy();
+                this.start.destroy();
+            }, this);
+        }
     },
     setMark: function ()
     {
@@ -202,7 +206,6 @@ Roulette.GameState = {
         var tile = this.add.sprite(400, 300, 'black');
         //Gives tile it's data
         tile.data = this.allData.boardButtons[2];
-        console.log(tile.data);
         //Adds to group
         this.boardTiles.add(tile);
         //If selected allow betting
@@ -215,7 +218,6 @@ Roulette.GameState = {
         var tile = this.add.sprite(400, 400, 'red');
         //Gives tile it's data
         tile.data = this.allData.boardButtons[0];
-        console.log(tile.data);
         //Adds to group
         this.boardTiles.add(tile);
         //If selected allow betting
@@ -228,7 +230,6 @@ Roulette.GameState = {
         var tile = this.add.sprite(400, 500, 'even');
         //Gives tile it's data
         tile.data = this.allData.boardButtons[1];
-        console.log(tile.data);
         //Adds to group
         this.boardTiles.add(tile);
         //If selected allow betting
@@ -241,7 +242,6 @@ Roulette.GameState = {
         var tile = this.add.sprite(400, 600, 'odd');
         //Gives tile it's data
         tile.data = this.allData.boardButtons[3];
-        console.log(tile.data);
         //Adds to group
         this.boardTiles.add(tile);
         //If selected allow betting
@@ -496,8 +496,9 @@ Roulette.GameState = {
             }
         });
         //If enough spins has occured
-        if (this.spins >= 3 && !this.isSpinning)
+        if (this.spins == 1 && !this.isSpinning)
         {
+            Roulette.Round++;
             this.alerts.destroy();
             this.alerts = this.add.sprite(200, 450, 'win');
             this.state.start('Prize');
@@ -506,6 +507,7 @@ Roulette.GameState = {
         //If there is no money and a new round has begun, in other words there is no money, but bets are placed that could give money, then the player loses
         else if (this.money == 0 && this.newRound)
         {
+            Rouletee.Round = 3;
             this.alerts.destroy();
             this.alerts = this.add.sprite(200, 450, 'lose');
             this.state.start('Prize');

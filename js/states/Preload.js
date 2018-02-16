@@ -8,7 +8,7 @@ Roulette.PreloadState = {
     this.preloadBar.anchor.setTo(0.5);
     this.preloadBar.scale.setTo(100, 1);
     this.load.setPreloadSprite(this.preloadBar);*/
-
+    Roulette.Round = 0;
     //images
     this.load.image('wheel', 'assets/images/wheel.png');
     this.load.image('wheelGlow', 'assets/images/wheelGlow.png');
@@ -40,7 +40,6 @@ Roulette.PreloadState = {
     this.load.image('blackout', 'assets/images/blackout.png');
 
     this.load.image('finalScreen', 'assets/images/game-page-background.jpg');
-    this.load.image('gift', 'assets/images/Gift.png');
     this.load.image('coupon', 'assets/images/coupon.jpg');
       
     this.load.audio('clicker', ['assets/audio/clicker.m4a', 'assets/audio/clicker.mp3', 'assets/audio/clicker.ogg']);
