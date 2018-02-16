@@ -199,49 +199,57 @@ Roulette.GameState = {
     tilizeBoard: function ()
     {
         //Creates the 'betting' board
-        for (var i = 0; i < 3; i++)
+        var tile = this.add.sprite(400, 300, 'black');
+        //Gives tile it's data
+        tile.data = this.allData.boardButtons[2];
+        console.log(tile.data);
+        //Adds to group
+        this.boardTiles.add(tile);
+        //If selected allow betting
+        tile.inputEnabled = true;
+        tile.events.onInputDown.add(function (tile)
         {
-            for (var j = 1; j < 13; j++)
-            {
-                var scale = 0.9;
-                var tile = new Phaser.Sprite(this.game, (i * (60 * scale)) + 410, (((j - 1) * (60 * scale)) + 50), this.allData.boardTiles[((((j - 1) * 3) + i))].asset);
-                tile.scale.setTo(scale);
-
-                //For single digits
-                //x = (row (0-2) * (tilesize * scale%)) + x offset to move to end of board
-                //y = (column (0-11)-1 (to begin at 0) * (tilesize * scale%) + 42 (tile offset))
-                this.allData.boardTiles[((((j - 1) * 3) + i))].x = (i * (60 * scale)) + 410;
-                this.allData.boardTiles[((((j - 1) * 3) + i))].y = ((j - 1) * (60 * scale) + 50);
-                this.allData.boardTiles[((((j - 1) * 3) + i))].boardRow = (i + 1);
-
-                //Assign each tile it's data
-                tile.data = this.allData.boardTiles[((((j - 1) * 3) + i))];
-                //Add to tile group
-                this.boardTiles.add(tile);
-                //When a tile is selected a bet will be placed on the tile
-                tile.inputEnabled = true;
-                tile.events.onInputDown.add(function (tile)
-                {
-                    this.bet(tile);
-                }, this);
-            }
-        }
-        //Creates outer tiles
-        for (var i = 0; i < this.allData.boardButtons.length; i++)
+            this.bet(tile);
+        }, this);
+        
+        var tile = this.add.sprite(400, 400, 'red');
+        //Gives tile it's data
+        tile.data = this.allData.boardButtons[0];
+        console.log(tile.data);
+        //Adds to group
+        this.boardTiles.add(tile);
+        //If selected allow betting
+        tile.inputEnabled = true;
+        tile.events.onInputDown.add(function (tile)
         {
-            var tile = new Phaser.Sprite(this.game, this.allData.boardButtons[i].x, this.allData.boardButtons[i].y, this.allData.boardButtons[i].asset);
-            tile.scale.setTo(scale);
-            //Gives tile it's data
-            tile.data = this.allData.boardButtons[i];
-            //Adds to group
-            this.boardTiles.add(tile);
-            //If selected allow betting
-            tile.inputEnabled = true;
-            tile.events.onInputDown.add(function (tile)
-            {
-                this.bet(tile);
-            }, this);
-        }
+            this.bet(tile);
+        }, this);
+        
+        var tile = this.add.sprite(400, 500, 'even');
+        //Gives tile it's data
+        tile.data = this.allData.boardButtons[1];
+        console.log(tile.data);
+        //Adds to group
+        this.boardTiles.add(tile);
+        //If selected allow betting
+        tile.inputEnabled = true;
+        tile.events.onInputDown.add(function (tile)
+        {
+            this.bet(tile);
+        }, this);
+        
+        var tile = this.add.sprite(400, 600, 'odd');
+        //Gives tile it's data
+        tile.data = this.allData.boardButtons[3];
+        console.log(tile.data);
+        //Adds to group
+        this.boardTiles.add(tile);
+        //If selected allow betting
+        tile.inputEnabled = true;
+        tile.events.onInputDown.add(function (tile)
+        {
+            this.bet(tile);
+        }, this);
     },
     addChips: function ()
     {
